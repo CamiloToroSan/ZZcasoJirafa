@@ -1,19 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Jirafa - Proyecto Colaborativo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jirafa - Animal Fascinante</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>NOMBRE COMÚN: Jirafa</h1> [cite: 10]
-        <h2>NOMBRE CIENTÍFICO: Giraffa camelopardalis</h2> [cite: 11]
-        <ul>
-            <li><strong>CLASE:</strong> Mamífero</li> [cite: 12]
-            <li><strong>VIDA MEDIA EN LIBERTAD:</strong> 25 años</li> [cite: 13]
-        </ul>
-    </header>
-    <main id="contenido-animal"></main>
+
+  <header>
+    <h1>🦒 Jirafa</h1>
+    <p><em>Giraffa camelopardalis</em></p>
+  </header>
+
+  <nav>
+    <a href="#descripcion">Descripción</a>
+    <a href="#caracteristicas">Características</a>
+    <a href="#galeria">Galería</a>
+    <a href="#fuentes">Fuentes</a>
+    <button id="btn-tema" onclick="cambiarTema()">🌙 Modo Oscuro</button>
+  </nav>
+
+  <main>
+
+    <section id="descripcion">
+      <h2>Descripción</h2>
+      <p>
+        La <strong>jirafa</strong> (<em>Giraffa camelopardalis</em>) es el animal
+        terrestre más alto del mundo, pudiendo alcanzar hasta
+        <strong>6 metros de altura</strong>. Habita en las sabanas y bosques
+        abiertos del <strong>África subsahariana</strong>.
+      </p>
+      <p>
+        Su cuello puede medir hasta <strong>2 metros</strong>, lo que le permite
+        alcanzar las hojas más altas de las acacias, su principal alimento.
+      </p>
+    </section>
+
+    <section id="galeria">
+      <h2>Imagen</h2>
+      <!-- Requerimiento 2: imagen con alt -->
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_Mikumi_National_Park.jpg/800px-Giraffe_Mikumi_National_Park.jpg"
+        alt="Jirafa adulta de pie en la sabana africana mostrando su largo cuello y manchas características"
+        id="img-jirafa"
+      >
+      <p><small>Jirafa en el Parque Nacional Mikumi, Tanzania</small></p>
+    </section>
+
+    <section id="caracteristicas">
+      <h2>Características Principales</h2>
+
+      <h3>Datos Técnicos</h3>
+      <table>
+        <tr><th>Nombre común</th><td>Jirafa</td></tr>
+        <tr><th>Nombre científico</th><td><em>Giraffa camelopardalis</em></td></tr>
+        <tr><th>Clase</th><td>Mamífero</td></tr>
+        <tr><th>Altura</th><td>4,27 a 5,79 metros</td></tr>
+        <tr><th>Peso</th><td>793 a 1.270 kg</td></tr>
+        <tr><th>Vida media</th><td>25 años en libertad</td></tr>
+        <tr><th>Estado</th><td>⚠️ Vulnerable (UICN)</td></tr>
+      </table>
+
+      <h3>Hábitat</h3>
+      <ul>
+        <li>Sabanas y bosques abiertos de África</li>
+        <li>Presente en 21 países del continente africano</li>
+        <li>Prefiere zonas con árboles de acacia</li>
+      </ul>
+
+      <h3>Alimentación</h3>
+      <ul>
+        <li>Herbívoro estricto (solo come plantas)</li>
+        <li>Come hasta <strong>34 kg</strong> de vegetación al día</li>
+        <li>Su lengua mide aproximadamente 45 cm</li>
+        <li>Puede pasar días sin beber agua</li>
+      </ul>
+
+      <h3>Comportamiento</h3>
+      <ul>
+        <li>Animales diurnos (activos durante el día)</li>
+        <li>Duermen solo 4 a 5 horas al día</li>
+        <li>Pueden correr hasta <strong>55 km/h</strong></li>
+        <li>Los machos luchan usando el cuello (comportamiento llamado <em>necking</em>)</li>
+        <li>Viven en grupos de 10 a 20 individuos</li>
+      </ul>
+
+      <h3>Reproducción</h3>
+      <ul>
+        <li>Gestación de <strong>15 meses</strong></li>
+        <li>Las crías nacen midiendo 1,8 metros</li>
+        <li>Pueden caminar a las pocas horas de nacer</li>
+      </ul>
+
+      <!-- Requerimiento 5: sección extra oculta que aparece al hacer clic -->
+      <div>
+        <button onclick="mostrarExtra()">➕ Ver datos curiosos</button>
+        <div id="extra-info" style="display:none;">
+          <h3>Datos curiosos</h3>
+          <ul>
+            <li>El patrón de manchas de cada jirafa es único, como las huellas dactilares</li>
+            <li>Su corazón pesa aproximadamente 11 kg</li>
+            <li>Es el único mamífero que nace con cuernos (llamados osiconos)</li>
+            <li>Pueden vivir sin tomar agua por semanas obteniendo líquido de las plantas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="fuentes">
+      <h2>Fuentes</h2>
+      <ul>
+        <li>
+          <a href="https://www.nationalgeographic.es/animales/jirafa"
+             target="_blank"
+             rel="noopener noreferrer">
+            National Geographic España — Jirafa
+          </a>
+        </li>
+        <li>
+          <a href="https://es.wikipedia.org/wiki/Giraffa_camelopardalis"
+             target="_blank"
+             rel="noopener noreferrer">
+            Wikipedia — Giraffa camelopardalis
+          </a>
+        </li>
+        <li>
+          <a href="https://www.iucnredlist.org/species/9194/136266699"
+             target="_blank"
+             rel="noopener noreferrer">
+            UICN Lista Roja — Estado de Conservación
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Proyecto colaborativo — Taller Git & GitHub · 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
